@@ -3,3 +3,150 @@
 /*          RUSHCLIN TAKAM COPYRIGHT 2023         */
 /*                                                */
 /**************************************************/
+
+:root {
+  /* HEADER-SIZE */
+
+  --header-height: 3rem;
+
+  /* COLORS */
+
+  --primary-color-1: #424340;
+  --primary-color-2: #606c5a;
+  --secondary-color-1: #b0b9a8;
+  --secondary-color-2: #c9e3cc;
+  --light-color: #b8cbd0;
+  --withe-color: #fff;
+  --text-color: hsl(45, 4%, 35%);
+  --text-color-light: hsl(45, 4%, 65%);
+
+  /* TYPOGRAPHY */
+
+  --fw-500: 500;
+  --fw-400: 400;
+  --fw-300: 300;
+
+  --normal-font-size: 0.938rem;
+  --small-font-size: 813rem;
+  --smaller-font-size: 0.75rem;
+
+  --ff-body: "Poppins";
+
+  /* MARGIN */
+
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+
+  /* Z-INDEX */
+
+  --z-fixed: 100;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary-color-1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color-1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color-2);
+}
+
+/* BASE */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-body);
+  background-color: var(--withe-color);
+  transition: 0.5s;
+  color: var(--text-color-light);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  background-color: var(--secondary-color-1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: 0.5s;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+
+.nav-link,
+.nav-logo,
+.nav-toggle {
+  color: var(--primary-color-1);
+  font-weight: var(--fw-400);
+}
+
+.active-link {
+  position: relative;
+  background-color: transparent;
+  transition: 0.53s ease;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  border-radius: 50%;
+  transition: 0.53s ease;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+  }
+}
