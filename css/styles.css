@@ -20,6 +20,7 @@
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
   --heading-color: hsl(var(--hue-1), 61%, 24%);
   --text-color: hsl(var(--hue-1), 17%, 63%);
+  --section-padding: 7rem;
 }
 
 /* GENERAL STYLE */
@@ -84,6 +85,7 @@ ul {
   color: var(--text-color);
   font-size: 0.9rem;
   margin: 2rem 0;
+  line-height: 2.3;
 }
 
 /* NAVBAR STYLE */
@@ -319,4 +321,145 @@ nav.container {
   left: 25%;
   bottom: 120px;
   transform: translate(-50%, -50%);
+}
+
+.section {
+  position: relative;
+  padding: var(--section-padding) 0;
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+}
+
+.about .text {
+  margin: 3rem 0 4rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 190px 190px;
+  grid-template-rows: 190px 190px;
+  justify-content: center;
+  column-gap: 2.5rem;
+  row-gap: 100px;
+  margin-right: 2rem;
+}
+
+.about-card {
+  background-color: var(--bg-color-2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.35s transform;
+}
+
+.about-card:hover {
+  transform: scale(1.1);
+}
+
+.about-card:nth-child(1) {
+  border-radius: 40px 40px 5px 40px;
+}
+
+.about-card:nth-child(2) {
+  margin-top: 50px;
+  border-radius: 40px 40px 40px 5px;
+}
+
+.about-card:nth-child(3) {
+  margin-top: -50px;
+  border-radius: 40px 5px 40px 40px;
+}
+
+.about-card:nth-child(4) {
+  border-radius: 5px 40px 40px 40px;
+}
+
+.icon {
+  width: 60px;
+}
+
+.st0 {
+  fill: var(--bg-color-3);
+}
+
+.st1 {
+  fill: #c5c5c5;
+}
+
+.st2 {
+  fill: var(--heading-color);
+}
+
+.skills-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sk-progress {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.sk-progress svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.sk-progress svg circle {
+  fill: var(--bg-color-3);
+  stroke-width: 5px;
+  stroke: var(--main-color-1);
+  stroke-dasharray: 427;
+  stroke-linecap: round;
+  stroke-dashoffset: 427;
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: var(--heading-color);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.counter span {
+  font-size: 2.35rem;
+}
+
+.sk-title {
+  color: var(--heading-color);
+  margin-top: 0.7rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
