@@ -27,6 +27,8 @@
 
   --heading-color: hsl(var(--hue-1), 61%, 24%);
   --text-color: hsl(var(--hue-1), 17%, 63%);
+
+  --section-padding: 7rem;
 }
 
 /* GENERAL STYLE */
@@ -43,6 +45,10 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-color);
   font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -122,6 +128,26 @@ ul {
   &:hover {
     background-color: var(--main-color-1);
   }
+}
+
+.section {
+  position: relative;
+  padding: var(--section-padding) 0;
+}
+
+.masked-image {
+  -webkit-mask-image: url("./../imgs/masked.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  position: relative;
+  display: block;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* NAVBAR STYLE */
@@ -328,5 +354,45 @@ header {
     left: 20%;
     bottom: 20px;
     transform: rotate(-50%, -50%);
+  }
+}
+
+/* ABOUT SECTION*/
+.about {
+  .container {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+
+    .about-image {
+      display: flex;
+      padding: 6rem;
+
+      .img-fluid {
+        border-radius: 10px;
+        transition: 0.7s;
+        transform: rotate(-3deg);
+
+        &:hover {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .btn {
+      margin-right: 1rem;
+    }
+
+    .text {
+      margin: 1rem 0 2rem;
+    }
+  }
+  .triangle {
+    position: absolute;
+    width: 95px;
+    left: 90%;
+    top: 25%;
+    transform: rotate(-50%, -50%);
+    opacity: 0.4;
   }
 }

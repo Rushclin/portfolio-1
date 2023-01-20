@@ -22,6 +22,7 @@
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
   --heading-color: hsl(var(--hue-1), 61%, 24%);
   --text-color: hsl(var(--hue-1), 17%, 63%);
+  --section-padding: 7rem;
 }
 
 /* GENERAL STYLE */
@@ -37,6 +38,10 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-color);
   font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-moz-selection {
@@ -119,6 +124,27 @@ ul {
 }
 .btn:hover {
   background-color: var(--main-color-1);
+}
+
+.section {
+  position: relative;
+  padding: var(--section-padding) 0;
+}
+
+.masked-image {
+  -webkit-mask-image: url("./../imgs/masked.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  position: relative;
+  display: block;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* NAVBAR STYLE */
@@ -300,4 +326,37 @@ header nav.container .toggle-btn:hover {
   left: 20%;
   bottom: 20px;
   transform: rotate(-50%, -50%);
+}
+
+/* ABOUT SECTION*/
+.about .container {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+}
+.about .container .about-image {
+  display: flex;
+  padding: 6rem;
+}
+.about .container .about-image .img-fluid {
+  border-radius: 10px;
+  transition: 0.7s;
+  transform: rotate(-3deg);
+}
+.about .container .about-image .img-fluid:hover {
+  transform: rotate(0deg);
+}
+.about .container .btn {
+  margin-right: 1rem;
+}
+.about .container .text {
+  margin: 1rem 0 2rem;
+}
+.about .triangle {
+  position: absolute;
+  width: 95px;
+  left: 90%;
+  top: 25%;
+  transform: rotate(-50%, -50%);
+  opacity: 0.4;
 }/*# sourceMappingURL=styles.css.map */
