@@ -359,4 +359,15 @@ header nav.container .toggle-btn:hover {
   top: 25%;
   transform: rotate(-50%, -50%);
   opacity: 0.4;
+}
+
+/* SKILLS SECTION */
+.skills {
+  overflow: hidden;
+}
+.skills .skills-box {
+  background-color: var(--bg-color-2);
+  padding: 5rem 6rem;
+  border-radius: 20px;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

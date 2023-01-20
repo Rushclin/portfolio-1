@@ -396,3 +396,16 @@ header {
     opacity: 0.4;
   }
 }
+
+/* SKILLS SECTION */
+
+.skills {
+  overflow: hidden;
+
+  .skills-box {
+    background-color: var(--bg-color-2);
+    padding: 5rem 6rem;
+    border-radius: 20px;
+    width: 100%;
+  }
+}
