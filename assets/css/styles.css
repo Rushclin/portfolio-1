@@ -22,7 +22,7 @@
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
   --heading-color: hsl(var(--hue-1), 61%, 24%);
   --text-color: hsl(var(--hue-1), 17%, 63%);
-  --section-padding: 7rem;
+  --section-padding: 3rem;
 }
 
 /* GENERAL STYLE */
@@ -464,4 +464,84 @@ header nav.container .toggle-btn:hover {
 }
 .experience .experience-box .experience-item .experience-header .experience-work-time {
   font-size: 0.6rem;
+}
+
+/* CONTACT SECTION */
+.contact .triangle {
+  position: absolute;
+  width: 150px;
+  bottom: 20%;
+  left: 10%;
+  transform: rotate(50%, 50%);
+  opacity: 0.2;
+}
+.contact .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+.contact .container .mail {
+  color: var(--main-color-1);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.contact .container .mail i {
+  color: var(--main-color-2);
+  transition: 3s;
+  margin-right: 0;
+}
+.contact .container .contact-form {
+  background-color: var(--bg-color-2);
+  border-radius: 20px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.contact .container .contact-form h3 {
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+  line-height: 0.8;
+}
+.contact .container .contact-form .text-input {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--bg-color-3);
+  border: 2px solid var(--bg-color-3);
+  margin-bottom: 0.7rem;
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--heading-color);
+  outline: none;
+  transition: 0.3s;
+}
+.contact .container .contact-form .text-input::-moz-placeholder {
+  color: var(--text-color);
+}
+.contact .container .contact-form .text-input:-ms-input-placeholder {
+  color: var(--text-color);
+}
+.contact .container .contact-form .text-input::placeholder {
+  color: var(--text-color);
+}
+.contact .container .contact-form .text-input:hover {
+  filter: brightness(97%);
+}
+.contact .container .contact-form .text-input:focus, .contact .container .contact-form .text-input:valid {
+  filter: brightness(100%);
+  background-color: var(--bg-color-1);
+  border-color: var(--main-color-1);
+}
+.contact .container .contact-form textarea {
+  resize: none;
+  min-height: 150px;
+}
+.contact .container button:focus, .contact .container button:hover {
+  border: solid 2px var(--main-color-1);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

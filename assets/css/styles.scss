@@ -28,7 +28,7 @@
   --heading-color: hsl(var(--hue-1), 61%, 24%);
   --text-color: hsl(var(--hue-1), 17%, 63%);
 
-  --section-padding: 7rem;
+  --section-padding: 3rem;
 }
 
 /* GENERAL STYLE */
@@ -520,6 +520,97 @@ header {
         .experience-work-time {
           font-size: 0.6rem;
         }
+      }
+    }
+  }
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  .triangle {
+    position: absolute;
+    width: 150px;
+    bottom: 20%;
+    left: 10%;
+    transform: rotate(50%, 50%);
+    opacity: 0.2;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+
+    .mail {
+      color: var(--main-color-1);
+      font-weight: 500;
+      font-size: 1.1rem;
+
+      i {
+        color: var(--main-color-2);
+        transition: 3s;
+        margin-right: 0;
+      }
+    }
+
+    .contact-form {
+      background-color: var(--bg-color-2);
+      border-radius: 20px;
+      padding: 3.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        color: var(--heading-color);
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 1.6rem;
+        line-height: 0.8;
+      }
+
+      .text-input {
+        display: inline-block;
+        padding: 0.9rem 1.5rem;
+        background-color: var(--bg-color-3);
+        border: 2px solid var(--bg-color-3);
+        margin-bottom: 0.7rem;
+        width: 100%;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: var(--heading-color);
+        outline: none;
+        transition: 0.3s;
+
+        &::placeholder {
+          color: var(--text-color);
+        }
+
+        &:hover {
+          filter: brightness(97%);
+        }
+
+        &:focus,
+        &:valid {
+          filter: brightness(100%);
+          background-color: var(--bg-color-1);
+          border-color: var(--main-color-1);
+        }
+      }
+
+      textarea {
+        resize: none;
+        min-height: 150px;
+      }
+    }
+
+    button {
+      &:focus,
+      &:hover {
+        border: solid 2px var(--main-color-1);
+        cursor: pointer;
       }
     }
   }
