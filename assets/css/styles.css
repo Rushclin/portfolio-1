@@ -205,10 +205,10 @@ header nav.container .links ul .nav-link {
   opacity: 0.9;
   transition: 0.3s;
 }
-header nav.container .links ul .nav-link:hover {
+header nav.container .links ul .nav-link:hover, header nav.container .links ul .nav-link.active {
   color: var(--heading-color);
 }
-header nav.container .links ul .nav-link:hover::after {
+header nav.container .links ul .nav-link:hover::after, header nav.container .links ul .nav-link:hover.active::after, header nav.container .links ul .nav-link.active::after, header nav.container .links ul .nav-link.active.active::after {
   opacity: 1;
   transition: 0.3s;
 }
@@ -425,6 +425,7 @@ header nav.container .toggle-btn:hover {
 /* EXPERIENCE SECTION */
 .experience {
   overflow: hidden;
+  padding: 7rem 0 0 0;
 }
 .experience .experience-box {
   background-color: var(--bg-color-2);
@@ -467,6 +468,9 @@ header nav.container .toggle-btn:hover {
 }
 
 /* CONTACT SECTION */
+.contact {
+  padding: 7rem 0 0 0;
+}
 .contact .triangle {
   position: absolute;
   width: 150px;

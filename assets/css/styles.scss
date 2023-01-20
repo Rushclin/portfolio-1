@@ -216,9 +216,12 @@ header {
           opacity: 0.9;
           transition: 0.3s;
 
-          &:hover {
+          &:hover,
+          &.active {
             color: var(--heading-color);
-            &::after {
+
+            &::after,
+            &.active::after {
               opacity: 1;
               transition: 0.3s;
             }
@@ -475,6 +478,7 @@ header {
 
 .experience {
   overflow: hidden;
+  padding: 7rem 0 0 0;
 
   .experience-box {
     background-color: var(--bg-color-2);
@@ -528,6 +532,8 @@ header {
 /* CONTACT SECTION */
 
 .contact {
+  padding: 7rem 0 0 0;
+
   .triangle {
     position: absolute;
     width: 150px;
