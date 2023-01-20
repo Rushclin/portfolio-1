@@ -407,5 +407,66 @@ header {
     padding: 5rem 6rem;
     border-radius: 20px;
     width: 100%;
+
+    .dots {
+      position: absolute;
+      width: 90px;
+      right: 60px;
+      top: 50px;
+    }
+  }
+
+  .skills-wrap {
+    .skills-heading {
+      padding-bottom: 1.05rem;
+      margin-top: 1rem;
+
+      .sub-heading {
+        border-left: solid 0px;
+        margin-left: 0px;
+        padding: 0;
+        font-family: "Abril Fatface", cursive;
+        font-size: 0.9rem;
+      }
+
+      hr {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .skills-group {
+      display: grid;
+      grid-template-columns: repeat(6, 120px);
+      justify-content: space-between;
+
+      .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+
+        .sk-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: solid 2px var(--bg-color);
+          border-radius: 50%;
+          height: 80px;
+          width: 80px;
+          background-color: var(--bg-color);
+          transition: 0.5s;
+
+          &:hover {
+            border-color: var(--bg-color);
+            background-color: transparent;
+          }
+        }
+
+        .sk-title {
+          color: var(--color);
+        }
+      }
+    }
   }
 }
