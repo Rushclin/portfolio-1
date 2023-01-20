@@ -420,4 +420,48 @@ header nav.container .toggle-btn:hover {
 }
 .skills .skills-wrap .skills-group .skill .sk-title {
   color: var(--color);
+}
+
+/* EXPERIENCE SECTION */
+.experience {
+  overflow: hidden;
+}
+.experience .experience-box {
+  background-color: var(--bg-color-2);
+  padding: 5rem 6rem;
+  border-radius: 20px;
+  width: 100%;
+}
+.experience .experience-box .experience-heading {
+  padding-top: 0.5rem;
+}
+.experience .experience-box .experience-heading hr {
+  margin-bottom: 1.5rem;
+}
+.experience .experience-box .experience-heading .sub-heading {
+  border-left: 0;
+  padding-left: 0;
+  font-family: "Abril Fatface";
+}
+.experience .experience-box .experience-item {
+  border-bottom: solid 1px var(--main-color-1);
+  margin-bottom: 1.5rem;
+}
+.experience .experience-box .experience-item .experience-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.experience .experience-box .experience-item .experience-header .experience-title {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.experience .experience-box .experience-item .experience-header .experience-subtitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.experience .experience-box .experience-item .experience-header .experience-work-time {
+  font-size: 0.6rem;
 }/*# sourceMappingURL=styles.css.map */

@@ -470,3 +470,57 @@ header {
     }
   }
 }
+
+/* EXPERIENCE SECTION */
+
+.experience {
+  overflow: hidden;
+
+  .experience-box {
+    background-color: var(--bg-color-2);
+    padding: 5rem 6rem;
+    border-radius: 20px;
+    width: 100%;
+
+    .experience-heading {
+      padding-top: 0.5rem;
+
+      hr {
+        margin-bottom: 1.5rem;
+      }
+
+      .sub-heading {
+        border-left: 0;
+        padding-left: 0;
+        font-family: "Abril Fatface";
+      }
+    }
+
+    .experience-item {
+      border-bottom: solid 1px var(--main-color-1);
+      margin-bottom: 1.5rem;
+
+      .experience-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .experience-title {
+          color: var(--text-color);
+          text-transform: uppercase;
+          font-size: 1rem;
+        }
+
+        .experience-subtitle {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+
+        .experience-work-time {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
