@@ -20,7 +20,7 @@
   --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
   --main-color-2: hsl(var(--hue-2), 100%, 61%);
   --main-color-dark-2: hsl(var(--hue-2), 82%, 55%);
-  --bg-color-1: hsl(var(--hue-1), 100%, 97%);
+  --bg-color-1: hsl(var(--hue-1), 100%, 91%);
   --bg-color-2: #fff;
   --bg-color-3: hsl(var(--hue-1), 100%, 98%);
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
@@ -613,5 +613,42 @@ header {
         cursor: pointer;
       }
     }
+  }
+}
+
+/* FOOTER SECTION */
+
+footer {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .social-media {
+      display: flex;
+
+      .social-link {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-left: 1rem;
+        background-color: var(--bg-color-1);
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
+
+        &:hover {
+          color: var(--main-color-1);
+        }
+      }
+    }
+  }
+
+  .logo {
+    font-family: "Agustina", sans-serif;
+    font-size: 1.5rem;
   }
 }
