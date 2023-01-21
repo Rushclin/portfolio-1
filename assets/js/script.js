@@ -13,6 +13,8 @@ const links = document.querySelectorAll(".nav-link");
 
 const hamburger = document.querySelector(".hamburger");
 
+const contactForm = document.getElementById("contact-form");
+
 const stickyScroll = () => {
   header.classList.toggle("scrolled", window.pageYOffset > 0);
   logoSpans.forEach((logoSpan) => {
@@ -72,3 +74,59 @@ links.forEach((link) => {
     document.body.classList.remove("open");
   });
 });
+
+/* EMAIL JS */
+
+window.addEventListener("load", () => {
+  emailjs.init("service_6n2comb");
+});
+
+contactForm
+  .addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("message").value;
+    let name = document.getElementById("name").value;
+
+    var templateParams = {
+      to_name: name,
+      from_name: email,
+      message: subject,
+    };
+
+    emailjs.send(
+      "service_6n2comb",
+      "template_smz7t4m",
+      templateParams,
+      "mUekWcwWqRgFMiiHO"
+    );
+  })
+  .then(
+    function (response) {
+      email.value = "";
+      subject.value = "";
+      name.value = "";
+      alert("Message send");
+      console.log("SUCCESS!", response.status, response.text);
+    },
+    function (error) {
+      console.log("FAILED...", error);
+    }
+  );
+
+/* emailjs
+  .send(
+    "service_6n2comb",
+    "template_smz7t4m",
+    templateParams,
+    "mUekWcwWqRgFMiiHO"
+  )
+  .then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+    },
+    function (error) {
+      console.log("FAILED...", error);
+    }
+  ); */
