@@ -786,6 +786,8 @@ footer .logo {
   }
   footer .container {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .skills .skills-box {
     padding: 1rem 1rem;
@@ -800,7 +802,7 @@ footer .logo {
     margin-bottom: 0.4rem;
   }
   .skills .skills-box .skills-wrap .skills-group {
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(2, 100px);
   }
   .skills .skills-box .skills-wrap .skills-group .skill {
     padding: 0.7rem;

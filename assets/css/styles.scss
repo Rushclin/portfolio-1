@@ -935,6 +935,13 @@ footer {
   footer {
     .container {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .social-media {
+        .social-link {
+        }
+      }
     }
   }
 
@@ -958,7 +965,7 @@ footer {
         }
 
         .skills-group {
-          grid-template-columns: repeat(3, 100px);
+          grid-template-columns: repeat(2, 100px);
 
           .skill {
             padding: 0.7rem;
