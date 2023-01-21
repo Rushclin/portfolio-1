@@ -11,6 +11,8 @@ const logoSpans = document.querySelectorAll(".logo-span");
 
 const links = document.querySelectorAll(".nav-link");
 
+const hamburger = document.querySelector(".hamburger");
+
 const stickyScroll = () => {
   header.classList.toggle("scrolled", window.pageYOffset > 0);
   logoSpans.forEach((logoSpan) => {
@@ -58,3 +60,15 @@ const activeLink = () => {
 };
 
 activeLink();
+
+/* HAMBURGER */
+
+hamburger.addEventListener("click", () => {
+  document.body.classList.toggle("open");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    document.body.classList.remove("open");
+  });
+});
