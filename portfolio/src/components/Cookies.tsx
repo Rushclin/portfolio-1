@@ -5,6 +5,7 @@ const Cookies = () => {
 
   const handlerClose = () => {
     setOpen(false);
+    console.log(open);
   };
 
   console.log("======>", open);
