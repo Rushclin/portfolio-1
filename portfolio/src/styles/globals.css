@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  cursor: none;
+  height: 100vh;
+}
+
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: hsl(0, 0%, 00%);
+}
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10000;
+  pointer-events: none;
+}
