@@ -1,9 +1,9 @@
 "use-client";
 import { NextPage } from "next";
-import "./../styles/globals.css";
-
 import React from "react";
 import Script from "next/script";
+
+import "./../styles/globals.css";
 
 interface AppProps {
   Component: NextPage;

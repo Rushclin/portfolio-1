@@ -12,8 +12,7 @@ const Document = () => {
 
         {/* Les balises métas  */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
 
         {/* Twitter  */}
         <meta name="twitter:title" content="⭕️Rushclin02" />
@@ -42,9 +41,6 @@ const Document = () => {
         <meta name="author" content="TAKAM RUSHCLIN" />
         <meta property="og:site_name" content="TAKAM RUSHCLIN " />
         <meta property="og:type" content="website" />
-
-        {/* Title  */}
-        <title>RUSHCLIN TAKAM • Front-End and Mobile Developer</title>
       </Head>
       <body>
         <div className="cursor-dot" data-cursor-dot />
