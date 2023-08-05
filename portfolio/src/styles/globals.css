@@ -2,11 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  cursor: none;
-  height: 100vh;
+/* Fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/abril-fatface");
+@import url("https://fonts.cdnfonts.com/css/agustina");
+
+:root {
+  --hue-1: 257;
+  --hue-2: 47;
+  --bg-color: hsl(var(--hue-1), 100%, 97%);
+  --main-color-1: hsl(var(--hue-1), 100%, 60%);
+  --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
+  --main-color-2: hsl(var(--hue-2), 100%, 61%);
+  --main-color-dark-2: hsl(var(--hue-2), 82%, 55%);
+  --bg-color-1: hsl(var(--hue-1), 100%, 91%);
+  --bg-color-2: #fff;
+  --bg-color-3: hsl(var(--hue-1), 100%, 98%);
+  --bg-color-transparent: rgba(255, 255, 255, 0.6);
+
+  --heading-color: hsl(var(--hue-1), 61%, 24%);
+  --text-color: hsl(var(--hue-1), 17%, 63%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 95%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 70%);
+}
+
+body {
+  cursor: none;
+  /* height: 100vh; */
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* To make cursor */
 .cursor-dot {
   width: 5px;
   height: 5px;
@@ -27,4 +78,14 @@ body {
   border-radius: 50%;
   z-index: 10000;
   pointer-events: none;
+}
+
+/* End make cursor */
+
+.heading {
+  color: var(--heading-color);
+}
+.text {
+  color: var(--text-color);
+  margin: 0.2rem 0;
 }
