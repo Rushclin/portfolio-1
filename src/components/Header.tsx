@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const myFont = localFont({
@@ -17,13 +18,13 @@ const Header = () => {
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
-          <a
+          <Link
             href="/"
             className={`flex-none text-xl font-semibold dark:text-white ${myFont.className}`}
             aria-label="Rushclin Takam"
           >
             Rushclin Takam
-          </a>
+          </Link>
 
           <div className="md:hidden">
             <button
@@ -63,15 +64,15 @@ const Header = () => {
           className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
         >
           <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-            <a
+            <Link
               className={`font-medium md:py-6 uppercase ${
                 route === "/" && activeStyle
               }`}
               href="/"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               className={`font-medium md:py-6 uppercase ${
                 route.includes("about") && activeStyle
               }`}
@@ -79,23 +80,23 @@ const Header = () => {
               aria-current="page"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               className={`font-medium md:py-6 uppercase ${
                 route.includes("experiences") && activeStyle
               }`}
               href="experiences"
             >
               Experiences
-            </a>
-            <a
+            </Link>
+            <Link
               className={`font-medium md:py-6 uppercase ${
                 route.includes("blog") && activeStyle
               }`}
               href="blog"
             >
               Blog
-            </a>
+            </Link>
 
             {/* Remove hidden for show it  */}
             <div className="hidden hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
@@ -122,12 +123,12 @@ const Header = () => {
               </button>
 
               <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2 dark:bg-gray-800 md:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5">
-                <a
+                <Link
                   className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                   href="#"
                 >
                   About
-                </a>
+                </Link>
                 <div className="hs-dropdown relative [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
                   <button
                     type="button"
@@ -152,43 +153,43 @@ const Header = () => {
                   </button>
 
                   <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 md:mt-2 bg-white md:shadow-md rounded-lg p-2 dark:bg-gray-800 md:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute md:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 right-full !mx-[10px]">
-                    <a
+                    <Link
                       className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                       href="#"
                     >
                       About
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                       href="#"
                     >
                       Downloads
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                       href="#"
                     >
                       Team Account
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
-                <a
+                <Link
                   className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                   href="#"
                 >
                   Downloads
-                </a>
-                <a
+                </Link>
+                <Link
                   className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                   href="#"
                 >
                   Team Account
-                </a>
+                </Link>
               </div>
             </div>
 
-            <a
+            <Link
               className={`flex items-center gap-x-2 font-medium md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500 uppercase ${
                 route.includes("contact") && activeStyle
               }`}
@@ -236,7 +237,7 @@ const Header = () => {
                 </g>
               </svg>
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

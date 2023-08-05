@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Cookies = () => {
@@ -5,10 +6,7 @@ const Cookies = () => {
 
   const handlerClose = () => {
     setOpen(false);
-    console.log(open);
   };
-
-  console.log("======>", open);
 
   return (
     <div
@@ -202,12 +200,12 @@ const Cookies = () => {
           <p className="text-sm text-gray-800 dark:text-gray-200">
             En naviguant sur mon site, vous acceptez les cookies. Vous pouvez
             les lire{" "}
-            <a
+            <Link
               className="inline-flex item-center gap-x-1.5 text-blue-600 decoration-2 hover:underline font-medium"
               href="#"
             >
               ici.
-            </a>
+            </Link>
           </p>
 
           <div>
