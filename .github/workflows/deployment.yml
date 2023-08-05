@@ -6,11 +6,13 @@ on:
   pull_request:
     branches: [main, develop]
 jobs:
-  defaults:
-    run:
-      working-directory: ./
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./
+
     strategy:
       matrix:
         node-version: [16.13.x]
