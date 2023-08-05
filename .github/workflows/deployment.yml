@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main, develop]
 jobs:
+  defaults:
+    run:
+      working-directory: ./
   build:
     runs-on: ubuntu-latest
     strategy:
