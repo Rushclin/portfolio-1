@@ -1,0 +1,36 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+      - v1.0
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+
+      - name: Build the Next.js app
+        run: npm ci && npm run build
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Login to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel login --token $VERCEL_TOKEN
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_PROD_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: vercel --prod --confirm --scope --build-env
