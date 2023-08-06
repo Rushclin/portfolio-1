@@ -31,8 +31,14 @@ jobs:
         run: vercel --token=$VERCEL_TOKEN --yes
 
       - name: Pull Vercel
-        run: vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --environment=production --token=$VERCEL_TOKEN --yes
       - name: Build Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: vercel build --prod --token=$VERCEL_TOKEN --yes
       - name: Deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
