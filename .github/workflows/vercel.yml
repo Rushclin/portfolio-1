@@ -33,6 +33,6 @@ jobs:
       - name: Pull Vercel
         run: vercel pull --yes --environment=production --token=$VERCEL_TOKEN
       - name: Build Vercel
-        run: vercel build --prod --token=$VERCEL_TOKEN
+        run: vercel build --prod --token=$VERCEL_TOKEN --yes
       - name: Deploy
         run: vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
