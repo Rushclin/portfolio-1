@@ -19,13 +19,13 @@ const AboutPage = () => {
               Rushclin Takam
             </h1>
             <p className="mt-3 text-lg text text-gray-800 dark:text-gray-400">
-              I am a young student, passionate about new technologies, My fields
+              {`I am a young student, passionate about new technologies, My fields
               of skills are multiple, I have an aptitude to deal with the
               problems both in life common only in programming. I find my
               comfort in web and mobile development, dynamic and team worker
               meet challenges. I have a mastery of development tools and I'm in
               constant search for learning. Find out more on my profile. So I
-              want to join your team.
+              want to join your team.`}
             </p>
 
             <div>
