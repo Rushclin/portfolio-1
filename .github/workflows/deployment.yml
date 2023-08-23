@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Deployement on Vercel
 
 on:
   push:
