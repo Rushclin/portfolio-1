@@ -47,7 +47,12 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
         <div className="mt-4">
           {experience.tags?.length &&
             experience.tags.map((tag, index) => (
-              <Tag color={tag.color} id={tag.id} title={tag.title} />
+              <Tag
+                color={tag.color}
+                id={tag.id}
+                title={tag.title}
+                key={index}
+              />
             ))}
         </div>
       </div>

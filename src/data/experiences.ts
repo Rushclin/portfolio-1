@@ -108,17 +108,17 @@ export const experiences: ExperienceObj[] = [
         title: "NestJS",
       },
       {
-        color: "bg-red-300",
+        color: "bg-blue-300",
         id: 2,
         title: "Prisma",
       },
       {
-        color: "bg-red-300",
+        color: "bg-green-700",
         id: 2,
         title: "Axios",
       },
       {
-        color: "bg-red-300",
+        color: "bg-blue-200",
         id: 2,
         title: "TypeScript",
       },
