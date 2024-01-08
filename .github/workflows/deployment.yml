@@ -2,7 +2,7 @@ name: Deployement on Vercel
 
 on:
   push:
-    branches: [main, v1.0, develop]
+    branches: [main, v1.0, develop, v2.0]
   pull_request:
     branches: [main, develop]
 jobs:

@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - v1.0
+      - v2.0
 
 jobs:
   build-and-deploy:
