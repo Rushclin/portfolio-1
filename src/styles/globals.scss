@@ -1,34 +1,41 @@
 /* Fonts  */
-@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
-@import url("https://fonts.cdnfonts.com/css/monthglade");
-@import url("https://db.onlinewebfonts.com/c/f98aea1dfb3d1fc460660c5e4e4b9612?family=SaolDisplay-SemiboldItalic");
-@import url("https://db.onlinewebfonts.com/c/4c4c08af466e9ad071b6d69cf44093df?family=SaolDisplay-Regular");
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@import url('https://fonts.cdnfonts.com/css/monthglade');
+@import url('https://db.onlinewebfonts.com/c/f98aea1dfb3d1fc460660c5e4e4b9612?family=SaolDisplay-SemiboldItalic');
+@import url('https://db.onlinewebfonts.com/c/4c4c08af466e9ad071b6d69cf44093df?family=SaolDisplay-Regular');
+
+
 :root {
+  
   /* Colors  */
+
   --color-primary: #131313;
   --color-secondary: #727272;
   --color-white: #F3F3F3;
+
   /* Fonts Families */
+
   --ff-helvetica-neue: "Helvetica Neue";
-  --ff-month-glade: "MonthGlade";
+  --ff-month-glade : "MonthGlade";
   --ff-saol-display-semi-bold-italic: "aolDisplay-SemiboldItalic";
   --ff-saol-display-regular: "SaolDisplay-Regular";
+
+
   /* Fonts weight  */
+
   --fw-400: 400;
+
+  
   /* Fonts sizes  */
+
   --fz-112: 112px;
   --fz-32: 32px;
   --fz-13: 13px;
-  --fz-88: 88px;
+  --fz-88: 88px; 
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-::-moz-selection {
-  background-color: var(--color-white);
-  color: var(--color-primary);
 }
 
 ::selection {
@@ -69,7 +76,7 @@ body {
 .cursor-outline {
   width: 40px;
   height: 40px;
-  border: 0.5px solid var(--color-secondary);
+  border: .5px solid var(--color-secondary);
 }
 
 .cursor-dot,
@@ -83,4 +90,4 @@ body {
   pointer-events: none;
 }
 
-/* End make cursor *//*# sourceMappingURL=globals.css.map */
+/* End make cursor */
