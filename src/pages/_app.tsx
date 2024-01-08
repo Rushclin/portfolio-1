@@ -12,11 +12,6 @@ interface AppProps {
 const App: React.FC<AppProps> = ({ Component }: AppProps) => {
   const { defaultProps } = Component;
 
-  React.useEffect(() => {
-    // @ts-ignore
-    import("preline");
-  }, []);
-
   return (
     <>
       <Component {...defaultProps} />
