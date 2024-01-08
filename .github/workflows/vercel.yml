@@ -17,7 +17,7 @@ jobs:
       - name: Install Node.js and npm
         uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: "18.0.x"
 
       - name: Build the Next.js app
         run: npm ci && npm run build
