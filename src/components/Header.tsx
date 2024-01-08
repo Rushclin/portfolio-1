@@ -99,7 +99,7 @@ const Header = () => {
             </Link>
 
             {/* Remove hidden for show it  */}
-            <div className="hidden hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
+            {/* <div className="hidden hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
               <button
                 type="button"
                 className="flex items-center w-full font-medium "
@@ -187,7 +187,7 @@ const Header = () => {
                   Team Account
                 </Link>
               </div>
-            </div>
+            </div> */}
 
             <Link
               className={`flex items-center gap-x-2 font-medium md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500 uppercase ${

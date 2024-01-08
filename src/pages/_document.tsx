@@ -1,3 +1,4 @@
+import { app } from "@/config/app";
 import { Head, Html, Main, NextScript } from "next/document";
 
 const Document = () => {
@@ -15,31 +16,27 @@ const Document = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
 
         {/* Twitter  */}
-        <meta name="twitter:title" content="⭕️Rushclin02" />
-        <meta name="twitter:site" content="@RushclinTakam" />
-        <meta name="twitter:creator" content="@RushclinTakam" />
+        <meta name="twitter:title" content={app.xTitle} />
+        <meta name="twitter:site" content={app.xSite} />
+        <meta name="twitter:creator" content={app.xSite} />
         <meta
           name="twitter:description"
-          content="Développeur FrontEnd et Mobile Junior"
+          content={app.xDescrption}
         />
         <meta
           name="keywords"
-          content="RUSHCLIN TAKAM, Developemrnt, RUSHCLIN, TAKAM, Développeur FrontEnd, Intégrateur Web, Camerounais, Dschang"
+          content={app.keywords}
         />
 
         {/* Open Graph  */}
         <meta property="og:image" content="./icons/favicon.png" />
-        <meta property="og:title" content="TAKAM RUSHCLIN" />
+        <meta property="og:title" content={app.fullName} />
         <meta
           property="og:description"
-          content="Développement des logiciels de bases,
-      applications webs, mobiles et des sites webs
-      responsives.
-      Modélisation et conception MERISE ou UML
-      Travail en équipe et sous-pression"
+          content={app.description}
         />
-        <meta name="author" content="TAKAM RUSHCLIN" />
-        <meta property="og:site_name" content="TAKAM RUSHCLIN " />
+        <meta name="author" content={app.fullName} />
+        <meta property="og:site_name" content={app.fullName} />
         <meta property="og:type" content="website" />
       </Head>
       <body>
