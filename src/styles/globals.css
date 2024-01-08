@@ -83,4 +83,52 @@ body {
   pointer-events: none;
 }
 
-/* End make cursor *//*# sourceMappingURL=globals.css.map */
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+  width: 100%;
+}
+.header a {
+  font-size: 1.4rem;
+  font-weight: var(--fw-400);
+}
+
+.link {
+  font-family: var(--ff-helvetica-neue);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.link:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=globals.css.map */

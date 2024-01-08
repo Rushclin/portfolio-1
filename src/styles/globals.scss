@@ -6,7 +6,7 @@
 
 
 :root {
-  
+
   /* Colors  */
 
   --color-primary: #131313;
@@ -16,7 +16,7 @@
   /* Fonts Families */
 
   --ff-helvetica-neue: "Helvetica Neue";
-  --ff-month-glade : "MonthGlade";
+  --ff-month-glade: "MonthGlade";
   --ff-saol-display-semi-bold-italic: "aolDisplay-SemiboldItalic";
   --ff-saol-display-regular: "SaolDisplay-Regular";
 
@@ -25,13 +25,13 @@
 
   --fw-400: 400;
 
-  
+
   /* Fonts sizes  */
 
   --fz-112: 112px;
   --fz-32: 32px;
   --fz-13: 13px;
-  --fz-88: 88px; 
+  --fz-88: 88px;
 }
 
 html {
@@ -76,7 +76,7 @@ body {
 .cursor-outline {
   width: 40px;
   height: 40px;
-  border: .5px solid var(--color-secondary);
+  border: .5px solid var(--color-secondary);  
 }
 
 .cursor-dot,
@@ -90,4 +90,60 @@ body {
   pointer-events: none;
 }
 
-/* End make cursor */
+
+a{
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.container {
+  max-width: 1200px;  
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+  // Styles pour les petits écrans
+  @media (max-width: 767px) {
+    padding: 0 10px;
+  }
+
+  // Styles pour les écrans de taille moyenne
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 0 30px;
+  }
+
+  // Styles pour les écrans de grande taille
+  @media (min-width: 992px) and (max-width: 1199px) {
+    padding: 0 40px;
+  }
+}
+
+// Pour le header 
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px; 
+  width: 100%;
+
+  a{
+    font-size: 1.4rem;
+    font-weight: var(--fw-400);
+  }
+}
+
+// Pour le lien 
+.link {
+  font-family: var(--ff-helvetica-neue);
+
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover{
+    transform: scale(1.1);
+  }
+}

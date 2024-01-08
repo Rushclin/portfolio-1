@@ -2,7 +2,7 @@
 export const app = {
   id: "portfolio" as const,
   shortName: "Rushclin Takam" as const,
-  fullName: "Rushclin Takam" as const,
+  fullName: "RUSHCLIN TAKAM" as const,
   logoName: "Rushclin Takam" as const,
   author: "Rushclin Takam" as const,
   description: "Développement des logiciels de bases,  applications webs, mobiles et des sites webs responsives.  Modélisation et conception MERISE ou UML Travail en équipe et sous-pression" as const,
