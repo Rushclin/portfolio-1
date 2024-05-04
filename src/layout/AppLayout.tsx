@@ -13,7 +13,7 @@ const AppLayout: React.FC<AppLayoutProps> = (props) => {
   return (
     <>
       <Head>
-        <title>{title ?? app.fullName}</title>
+        <title>{title ?? app.fullName + " " + app.description}</title>
       </Head>
       <div className="container">{children}</div>
     </>
